@@ -13,6 +13,7 @@ view: fakeorders {
   dimension: customer_id {
     type: string
     sql: ${TABLE}.customer_id ;;
+    drill_fields: [orders.id]
   }
 
   dimension: order_id {
@@ -38,6 +39,7 @@ view: fakeorders {
   measure: average_order_price {
     type: average
     sql: ${order_price} ;;
+    drill_fields: [orders.id]
   }
 
   measure: count {
