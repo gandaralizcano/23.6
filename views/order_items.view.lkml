@@ -62,8 +62,9 @@ view: order_items {
   }
 dimension: Date_string_type  {
   type: string
-  sql: ${returned_date};;
-  html: {{ rendered_value | date: "%F" }};;
+  sql: DATE_FORMAT(${returned_date},YYYY-MM-DD) ;;
+  # sql: ${returned_date};;
+  # html: {{ rendered_value | date: "%F" }};;
 }
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
