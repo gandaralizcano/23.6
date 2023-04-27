@@ -60,7 +60,7 @@ view: order_items {
     type: number
     sql: ${TABLE}.sale_price ;;
   }
-dimension: Date_string_type  {
+dimension: Date_string_type1  {
   type: string
   sql: DATE_FORMAT(${returned_date},YYYY-MM-DD) ;;
   # sql: ${returned_date};;
