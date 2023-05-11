@@ -50,6 +50,7 @@ view: order_items_vijaya {
     type: number
     sql: ${TABLE}.sale_price ;;
   }
+
   parameter: item_to_add_up {
     type: unquoted
     allowed_value: {
@@ -72,6 +73,7 @@ view: order_items_vijaya {
     label_from_parameter: item_to_add_up
     value_format_name: "usd"
   }
+
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
