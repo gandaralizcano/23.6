@@ -51,6 +51,29 @@ view: order_items_vijaya {
     sql: ${TABLE}.sale_price ;;
   }
 
+  parameter: item_to_add_up {
+    type: unquoted
+    allowed_value: {
+      label: "Total Sale Price"
+      value: "sale_price"
+    }
+    allowed_value: {
+      label: "Total Cost"
+      value: "order_id"
+    }
+    allowed_value: {
+      label: "Total Profit"
+      value: "id"
+    }
+  }
+
+  measure: dynamic_sum {
+    type: sum
+    sql: ${TABLE}.{% parameter item_to_add_up %} ;;
+    label_from_parameter: item_to_add_up
+    value_format_name: "usd"
+  }
+
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
