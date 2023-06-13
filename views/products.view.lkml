@@ -58,7 +58,7 @@ view: products {
 
   measure: average_retail_price {
     type: average
-    sql: ${retail_price} ;;
+    sql: IFNULL(${retail_price}, 9000) ;;
   }
 
   dimension: sku {
