@@ -44,7 +44,6 @@ view: orders {
     # hidden: yes
     sql: ${TABLE}.user_id ;;
   }
-
   measure: count {
     type: count
     drill_fields: [detail*]
