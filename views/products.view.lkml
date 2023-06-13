@@ -51,15 +51,18 @@ view: products {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
+
+#  measure: total_retail_price {
+ #   type: sum
+ #   sql: ${retail_price} ;;
+ # }
+
   measure: total_retail_price {
     type: sum
-    sql: ${retail_price} ;;
+    sql: CASE WHEN retail_price IS NULL THEN LAG(retail_price) OVER (ORDER BY id) ELSE retail_price END
   }
 
-  measure: average_retail_price {
-    type: average
-    sql: ${retail_price} ;;
-  }
+
 
   dimension: sku {
     type: string
