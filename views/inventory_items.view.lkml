@@ -29,14 +29,6 @@ view: inventory_items {
   measure: total_cost {
     type: sum
     sql: ${cost} ;;
-    link: {
-      label: "Drill_cost"
-      url:
-
-      #"https://gcpl236.cloud.looker.com/explore/arturo_thelook/order_items?fields=inventory_items.created_date,inventory_items.average_cost,inventory_items.total_cost,orders.status,products.category&f[orders.status]=pending%2Ccomplete&f[products.category]=Jeans%2CAccessories%2CActive%2CDresses&sorts=inventory_items.created_date+desc,orders.status&limit=500&column_limit=50&query_timezone=UTC&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22orders.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pending%2Ccomplete%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22products.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Jeans%2CAccessories%2CActive%2CDresses%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded"
-
-      "https://gcpl236.cloud.looker.com/dashboards/322?Status=pending%2Ccomplete&Category=Jeans%2CAccessories%2CActive%2CDresses"
-    }
   }
 
   measure: average_cost {
